@@ -1,6 +1,6 @@
 # Data Scientist Project
 
-This is original a Udacity's Data Scientist Nano-Degree Program project. 
+This is originally a Udacity's Data Scientist Nano-Degree Program project. 
 
 To use this for fun, use command line to run train.py and predict.py. It's better to use the GPU enabled workspace for better performance while training the model.
 
@@ -17,3 +17,21 @@ The original design of the project was done by udacity.
 The code was written and tested by myself.
 
 You can find the original repo from [udacity's github](https://github.com/udacity/DSND_Term1).
+
+
+### Commandline app
+
+1. `train.py`:
+  * Basic usage: python train.py data_directory
+  * Options:
+    * Set directory to save checkpoints: python train.py data_dir --save_dir save_directory
+    * Choose architecture: python train.py data_dir --arch "vgg13"
+    * Set hyperparameters: python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20
+    * Use GPU for training: python train.py data_dir --gpu
+2. `predict.py`
+  * Basic usage: python predict.py /path/to/image checkpoint
+  * Options:
+    * Return top KK most likely classes: python predict.py input checkpoint --top_k 3
+    * Use a mapping of categories to real names: python predict.py input checkpoint --category_names cat_to_name.json
+    * Use GPU for inference: python predict.py input checkpoint --gpu
+
